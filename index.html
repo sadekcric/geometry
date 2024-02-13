@@ -10,12 +10,12 @@
   </head>
   <body>
     <header></header>
-    <main class="flex flex-col md:flex-row m-10 ">
-      <section class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-4 mr-4 mb-10">
+    <main class="flex flex-col md:flex-row m-10">
+      <section class="flex-1 grid lg:grid-cols-3 gap-4 mr-4 mb-10">
         <!-- Triangle -->
         <div class="card border-2 border-gray-200 p-3 duration-200" id="triangle_div">
           <div class="flex justify-center">
-            <img src="images/triangle.png"/>
+            <img src="images/triangle.png" />
           </div>
           <div class="card-body">
             <h2 class="font-bold text-center text-3xl">Triangle</h2>
@@ -24,7 +24,7 @@
 
             <div class="flex justify-center text-center">
               <div>
-                <input type="text" id="base" name=""  placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                <input type="text" id="base" name="" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
                   class="text-xl"
                   >cm</span
                 >
@@ -35,9 +35,10 @@
                   >cm</span
                 >
               </div>
-
             </div>
-            <p>Area: <span id="triangleArea" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span></p>
+            <p>
+              Area: <span id="triangleArea" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span>
+            </p>
             <div class="card-actions">
               <button class="btn btn-primary w-full" id="triangleBtn">Calculate</button>
             </div>
@@ -56,17 +57,22 @@
 
             <div class="flex justify-center text-center">
               <div>
-                <input type="text" name="" id="width" placeholder="w" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                <input type="text" name="" id="width" placeholder="w" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                  class="text-xl"
                   >cm</span
                 >
               </div>
 
               <div>
-                <input type="text" placeholder="l" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" id="length"/><span class="text-xl">cm</span>
+                <input type="text" placeholder="l" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" id="length" /><span class="text-xl"
+                  >cm</span
+                >
               </div>
             </div>
 
-            <p>Area: <span id="rectangleArea" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span></p>
+            <p>
+              Area: <span id="rectangleArea" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span>
+            </p>
 
             <div class="card-actions" id="rectangleBtn">
               <button class="btn btn-primary w-full">Calculate</button>
@@ -75,8 +81,7 @@
         </div>
 
         <!-- Parallelogram -->
-        <div class="card border-2 border-gray-200 p-3 duration-200"
-        id="parallelogram_div">
+        <div class="card border-2 border-gray-200 p-3 duration-200" id="parallelogram_div">
           <div class="flex justify-center">
             <img src="images/parallelogram.png" />
           </div>
@@ -86,19 +91,24 @@
             <p class="text-center">Area (A) = b * h</p>
 
             <div class="flex justify-center text-center">
-
               <div>
-                <input type="text" name="" id="parallelogram_base" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                <input type="text" name="" id="parallelogram_base" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                  class="text-xl"
                   >cm</span
                 >
               </div>
 
               <div>
-                <input type="text" id="parallelogram_height" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl">cm</span>
+                <input type="text" id="parallelogram_height" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                  class="text-xl"
+                  >cm</span
+                >
               </div>
             </div>
 
-            <p>Area: <span id="parallelogram_aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span></p>
+            <p>
+              Area: <span id="parallelogram_aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span>
+            </p>
 
             <div class="card-actions">
               <button class="btn btn-primary w-full" id="parallelogram_btn">Calculate</button>
@@ -107,10 +117,9 @@
         </div>
 
         <!-- Rhombus -->
-        <div class="card border-2 border-gray-200 p-3 duration-200"
-        id="rhombus_div">
+        <div class="card border-2 border-gray-200 p-3 duration-200" id="rhombus_div">
           <div class="flex justify-center">
-            <img src="images/rhombus.png"  />
+            <img src="images/rhombus.png" />
           </div>
 
           <div class="card-body">
@@ -121,18 +130,23 @@
             <!-- ======InputBox-1========= -->
             <div class="flex justify-center text-center">
               <div>
-                <input type="text" name="" id="rhombus-d1" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                <input type="text" name="" id="rhombus-d1" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                  class="text-xl"
                   >cm</span
                 >
               </div>
 
               <!-- ========input box-2========== -->
               <div>
-                <input type="text" id="rhombus-d2" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl">cm</span>
+                <input type="text" id="rhombus-d2" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                  >cm</span
+                >
               </div>
             </div>
 
-            <p>Area: <span id="rhombus-aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span></p>
+            <p>
+              Area: <span id="rhombus-aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span>
+            </p>
 
             <div class="card-actions">
               <button class="btn btn-primary w-full" id="rhombus-btn">Calculate</button>
@@ -143,7 +157,7 @@
         <!-- Pentagon -->
         <div class="card border-2 border-gray-200 p-3 duration-200" id="pentagon_div">
           <div class="flex justify-center">
-            <img src="images/pentagon.png"  />
+            <img src="images/pentagon.png" />
           </div>
           <div class="card-body">
             <h2 class="font-bold text-center text-3xl">Pentagon</h2>
@@ -152,17 +166,22 @@
 
             <div class="flex justify-center text-center">
               <div>
-                <input type="text" name="" id="pentagon_p" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                <input type="text" name="" id="pentagon_p" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                  class="text-xl"
                   >cm</span
                 >
               </div>
 
               <div>
-                <input type="text" id="pentagon_b" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl">cm</span>
+                <input type="text" id="pentagon_b" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                  >cm</span
+                >
               </div>
             </div>
 
-            <p>Area: <span id="pentagon_aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span></p>
+            <p>
+              Area: <span id="pentagon_aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span>
+            </p>
 
             <div class="card-actions">
               <button class="btn btn-primary w-full" id="pentagon_btn">Calculate</button>
@@ -171,8 +190,7 @@
         </div>
 
         <!-- Ellipse -->
-        <div class="card border-2 border-gray-200 p-3 duration-200"
-        id="ellipse_div">
+        <div class="card border-2 border-gray-200 p-3 duration-200" id="ellipse_div">
           <div class="flex justify-center">
             <img src="images/ellipse.png" />
           </div>
@@ -183,17 +201,22 @@
 
             <div class="flex justify-center text-center">
               <div>
-                <input type="text" name="" id="ellipse_a" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                <input type="text" name="" id="ellipse_a" placeholder="b" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span
+                  class="text-xl"
                   >cm</span
                 >
               </div>
 
               <div>
-                <input type="text" id="ellipse_b" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl">cm</span>
+                <input type="text" id="ellipse_b" placeholder="h" class="w-1/2 px-2 py-1 bg-gray-200 mr-2 text-xl" /><span class="text-xl"
+                  >cm</span
+                >
               </div>
             </div>
 
-            <p>Area: <span id="ellipse_aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span></p>
+            <p>
+              Area: <span id="ellipse_aria" class="text-green-700 font-semibold">0</span> <span>cm<sup>2</sup></span>
+            </p>
 
             <div class="card-actions">
               <button class="btn btn-primary w-full" id="ellipse_btn">Calculate</button>
@@ -201,13 +224,19 @@
           </div>
         </div>
       </section>
-      <section class="border-2 border-gray-300 md:w-1/4 min-h-96">
+      <section class="border-2 border-gray-300 md:w-1/2 lg:w-1/3 min-h-96 p-2">
+        
+        <!-- =======Aria Child==== -->
         <div>
-          <h3 class="text-center">Area Calculation</h3>
+          <h3 class="text-center text-3xl font-bold" >Area Calculation</h3>
+          <div class="border-b-2 w-56 mx-auto border-black"></div>
+          <div id="aria_calculation">
+            
+          </div>
         </div>
       </section>
     </main>
-    
+
     <script src="script.js"></script>
   </body>
 </html>

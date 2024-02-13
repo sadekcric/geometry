@@ -12,20 +12,44 @@ function multiplicationCalculate(cm1, cm2) {
 function backgroundColorMouseOver(id, color) {
   return document.getElementById(id).addEventListener("mouseover", function () {
     this.style.background = color;
-    console.log(`mouse over`);
   });
 }
 function backgroundColorMouseOut(id, color) {
   return document.getElementById(id).addEventListener("mouseout", function () {
     this.style.background = color;
-    console.log(`Mouse out`);
   });
+}
+
+function AriaCalculationChild(title, ariaOutput){
+  const childDiv=document.createElement('div');
+  const childTitle=document.createElement('h4');
+  const childInfo=document.createElement('h4');
+  const childBtn=document.createElement('button');
+
+  childDiv.appendChild(childTitle);
+  childDiv.appendChild(childInfo);
+  childDiv.appendChild(childBtn);
+
+  childTitle.innerText=title;
+  childInfo.innerHTML=`${ariaOutput} cm<sup>2</sup>`;
+  childBtn.innerHTML='convert to m<sup>2</sup>';
+
+  childDiv.classList=['flex justify-around items-center mt-3'];
+  childTitle.classList=['text-lg font-semibold'];
+  childInfo.classList=['text-lg font-semibold'];
+  childBtn.classList=['px-5 py-3 bg-blue-700 rounded-lg text-white'];
+
+  return document.getElementById('aria_calculation').appendChild(childDiv)
+
 }
 
 // For Triangle
 document.getElementById("triangleBtn").addEventListener("click", function () {
   const area = 0.5 * multiplicationCalculate(`base`, "height");
   document.getElementById("triangleArea").innerText = area;
+
+  // Aria Calculation sector
+  AriaCalculationChild('Triangle', area);
 });
 backgroundColorMouseOver("triangle_div", "#76D7C4");
 backgroundColorMouseOut("triangle_div", "");
@@ -34,6 +58,9 @@ backgroundColorMouseOut("triangle_div", "");
 document.getElementById("rectangleBtn").addEventListener("click", function () {
   const area = multiplicationCalculate("width", "length");
   document.getElementById("rectangleArea").innerText = area;
+
+  // Aria Calculation sector
+  AriaCalculationChild('Rectangle', area);
 });
 backgroundColorMouseOver("rectangle_div", "#7AC17E");
 backgroundColorMouseOut("rectangle_div", "");
@@ -42,6 +69,9 @@ backgroundColorMouseOut("rectangle_div", "");
 document.getElementById("parallelogram_btn").addEventListener("click", function () {
   const area = multiplicationCalculate("parallelogram_base", "parallelogram_height");
   document.getElementById("parallelogram_aria").innerText = area;
+
+  // Aria Calculation sector
+  AriaCalculationChild('Parallelogram', area);
 });
 backgroundColorMouseOver("parallelogram_div", "#C1A77A");
 backgroundColorMouseOut("parallelogram_div", "");
@@ -50,6 +80,9 @@ backgroundColorMouseOut("parallelogram_div", "");
 document.getElementById("rhombus-btn").addEventListener("click", function () {
   const area = 0.5 * multiplicationCalculate("rhombus-d1", "rhombus-d2");
   document.getElementById("rhombus-aria").innerText = area;
+
+  // Aria Calculation sector
+  AriaCalculationChild('Rhombus', area);
 });
 backgroundColorMouseOver("rhombus_div", "#7AC0C1");
 backgroundColorMouseOut("rhombus_div", "");
@@ -58,6 +91,8 @@ backgroundColorMouseOut("rhombus_div", "");
 document.getElementById("pentagon_btn").addEventListener("click", function () {
   const area = 0.5 * multiplicationCalculate("pentagon_p", "pentagon_b");
   document.getElementById("pentagon_aria").innerText = area;
+  // Aria Calculation sector
+  AriaCalculationChild('Pentagon', area);
 });
 backgroundColorMouseOver("pentagon_div", "#A27AC1");
 backgroundColorMouseOut("pentagon_div", "");
@@ -66,6 +101,8 @@ backgroundColorMouseOut("pentagon_div", "");
 document.getElementById("ellipse_btn").addEventListener("click", function () {
   const area = 0.1416 * multiplicationCalculate("ellipse_a", "ellipse_b");
   document.getElementById("ellipse_aria").innerText = area;
+
+  // Aria Calculation sector
+  AriaCalculationChild('Ellipse', area);
 });
-backgroundColorMouseOver("ellipse_div", "#C17AAD");
-backgroundColorMouseOut("ellipse_div", "");
+
